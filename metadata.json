@@ -1,0 +1,6 @@
+{
+  "name": "Age Calendar",
+  "description": "An advanced age calendar that rounds up years with 6 months 1 day, shows countdown to next birthday, displays age-appropriate 3D style avatars, and provides personalized Gemini horoscope predictions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

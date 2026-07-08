@@ -1,0 +1,32 @@
+{
+  "name": "উন্নত বয়স ক্যালেন্ডার ও রাশিফল",
+  "short_name": "বয়স ও রাশিফল",
+  "description": "নাছির আহমেদ নাঈম এর বুদ্ধিমত্তা দ্বারা চালিত উন্নত বয়স ক্যালেন্ডার, কাউন্টডাউন ও রাশিফল অ্যাপলেট",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#4f46e5",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["utilities", "lifestyle"],
+  "shortcuts": [
+    {
+      "name": "আজকের রাশিফল",
+      "url": "/?shortcut=horoscope",
+      "description": "আপনার রাশির আজকের পূর্বাভাস ও ব্যক্তিত্ব বিশ্লেষণ দেখুন"
+    }
+  ]
+}

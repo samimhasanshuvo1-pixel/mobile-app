@@ -1,0 +1,6 @@
+{
+	"appId": "com.agecalendar.app",
+	"appName": "Age Calendar",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}

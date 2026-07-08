@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>উন্নত বয়স ক্যালেন্ডার ও রাশিফল</title>
+    
+    <!-- PWA Meta Tags & Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#4f46e5" />
+    
+    <!-- iOS Support -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="বয়স ও রাশিফল" />
+    <link rel="apple-touch-icon" href="/icon.svg" />
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/sw.js")
+            .then((reg) => {
+              console.log("[PWA] Service Worker registered successfully:", reg.scope);
+            })
+            .catch((err) => {
+              console.error("[PWA] Service Worker registration failed:", err);
+            });
+        });
+      }
+    </script>
+  </head>
+  <body class="bg-slate-900 select-none antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

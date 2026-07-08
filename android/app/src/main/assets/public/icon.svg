@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="cosmicBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="40%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#311042" />
+    </linearGradient>
+
+    <!-- Golden Glow/Gradient for the Astrological Wheel -->
+    <linearGradient id="goldGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ca8a04" />
+      <stop offset="50%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#fef08a" />
+    </linearGradient>
+
+    <!-- Outer Ring Gradient -->
+    <linearGradient id="indigoGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Base App Background (Squircle for modern launcher look) -->
+  <rect x="0" y="0" width="512" height="512" rx="112" fill="url(#cosmicBg)" />
+
+  <!-- Subtle grid lines to feel astronomical -->
+  <circle cx="256" cy="256" r="230" fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1.5" />
+  <circle cx="256" cy="256" r="190" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1.5" />
+  <path d="M 256,10 L 256,502" stroke="#ffffff" stroke-opacity="0.02" stroke-width="1" />
+  <path d="M 10,256 L 502,256" stroke="#ffffff" stroke-opacity="0.02" stroke-width="1" />
+
+  <!-- Ambient Glow behind the wheel -->
+  <circle cx="256" cy="256" r="180" fill="url(#centerGlow)" />
+
+  <!-- Astrological Golden Wheel -->
+  <circle cx="256" cy="256" r="160" fill="none" stroke="url(#goldGrad)" stroke-width="6" filter="drop-shadow(0px 0px 12px rgba(234, 179, 8, 0.45))" />
+  <circle cx="256" cy="256" r="142" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" stroke-dasharray="3, 5" stroke-opacity="0.8" />
+  <circle cx="256" cy="256" r="176" fill="none" stroke="url(#goldGrad)" stroke-width="1" stroke-opacity="0.4" />
+
+  <!-- 12 Zodiac segments divisions -->
+  <g stroke="url(#goldGrad)" stroke-width="1" stroke-opacity="0.3">
+    <line x1="256" y1="96" x2="256" y2="120" />
+    <line x1="256" y1="392" x2="256" y2="416" />
+    <line x1="96" y1="256" x2="120" y2="256" />
+    <line x1="392" y1="256" x2="416" y2="256" />
+    <line x1="143" y1="143" x2="160" y2="160" />
+    <line x1="352" y1="352" x2="369" y2="369" />
+    <line x1="352" y1="143" x2="369" y2="160" />
+    <line x1="143" y1="352" x2="160" y2="369" />
+  </g>
+
+  <!-- Central Clock Hands (Combining Time and Horoscope) -->
+  <g transform="translate(256, 256)">
+    <!-- Hour Hand -->
+    <path d="M 0,10 L 0,-60" stroke="url(#indigoGlow)" stroke-width="5" stroke-linecap="round" />
+    <!-- Minute Hand pointing to an angle -->
+    <path d="M 0,12 L 80,-40" stroke="url(#indigoGlow)" stroke-width="3" stroke-linecap="round" />
+    <!-- Center Pivot Pin -->
+    <circle cx="0" cy="0" r="12" fill="#ffffff" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.5))" />
+    <circle cx="0" cy="0" r="5" fill="#ca8a04" />
+  </g>
+
+  <!-- Glowing astrological sparks (magical stars) -->
+  <path d="M 170,190 L 175,195 L 170,200 L 165,195 Z" fill="#ffffff" opacity="0.9" filter="drop-shadow(0 0 4px #fff)" />
+  <path d="M 340,180 L 343,183 L 340,186 L 337,183 Z" fill="#ffffff" opacity="0.8" filter="drop-shadow(0 0 4px #fff)" />
+  <path d="M 230,340 L 234,344 L 230,348 L 226,344 Z" fill="#ffffff" opacity="0.95" filter="drop-shadow(0 0 4px #fff)" />
+  <path d="M 190,300 L 192,302 L 190,304 L 188,302 Z" fill="#ffffff" opacity="0.7" />
+  <path d="M 310,290 L 314,294 L 310,298 L 306,294 Z" fill="url(#goldGrad)" opacity="0.9" />
+
+  <!-- Elegant outer glowing ring border -->
+  <rect x="8" y="8" width="496" height="496" rx="104" fill="none" stroke="url(#indigoGlow)" stroke-width="4" stroke-opacity="0.4" />
+</svg>
